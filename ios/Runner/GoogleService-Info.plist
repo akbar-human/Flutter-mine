@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>100794854016-krtrf0atk1gmeqd6lm1cbjk4bopv6b2l.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.100794854016-krtrf0atk1gmeqd6lm1cbjk4bopv6b2l</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBz9I7gv6fXjPWoml1Zh0ss1F3TTGobE-I</string>
+	<key>GCM_SENDER_ID</key>
+	<string>100794854016</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.akbar.airplane</string>
+	<key>PROJECT_ID</key>
+	<string>airplane-b9190</string>
+	<key>STORAGE_BUCKET</key>
+	<string>airplane-b9190.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:100794854016:ios:fd91e9794b4853e3551465</string>
+</dict>
+</plist>

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "100794854016",
+    "project_id": "airplane-b9190",
+    "storage_bucket": "airplane-b9190.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:100794854016:android:db9aa9799749a4fe551465",
+        "android_client_info": {
+          "package_name": "com.akbar.airplane"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "100794854016-at65hmqo2mdljak53a1g7hr3nigqustl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyq4bO_U2phRKg9LEj4EsGIgJFZyQhmqM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "100794854016-at65hmqo2mdljak53a1g7hr3nigqustl.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "100794854016-krtrf0atk1gmeqd6lm1cbjk4bopv6b2l.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.akbar.airplane"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
