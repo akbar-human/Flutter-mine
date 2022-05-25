@@ -15,12 +15,12 @@ class AuthLoading extends AuthState {}
 
 // dijalankan ketika Berhasil
 class AuthSuccess extends AuthState {
-  final UserModel userModel;
+  final UserModel user;
 
-  AuthSuccess(this.userModel);
+  AuthSuccess(this.user);
 
   @override
-  List<Object> get props => [userModel];
+  List<Object> get props => [user];
 }
 
 class AuthFailed extends AuthState {

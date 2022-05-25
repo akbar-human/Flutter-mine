@@ -5,22 +5,19 @@ import 'package:airplane/ui/widgets/custom_text_form_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class SignUpPage extends StatelessWidget {
-  SignUpPage({Key? key}) : super(key: key);
+class SignInPage extends StatelessWidget {
+  SignInPage({Key? key}) : super(key: key);
 
-  final TextEditingController nameController = TextEditingController(text: '');
   final TextEditingController emailController = TextEditingController(text: '');
   final TextEditingController passwordController =
       TextEditingController(text: '');
-  final TextEditingController hobbyController = TextEditingController(text: '');
-
   @override
   Widget build(BuildContext context) {
     Widget title() {
       return Container(
         margin: EdgeInsets.only(top: 30),
         child: Text(
-          'Join us and get \nyour next journey',
+          'Sign In with your\nexisting account',
           style: blackTextStyle.copyWith(fontSize: 24, fontWeight: semiBold),
         ),
       );
@@ -63,15 +60,15 @@ class SignUpPage extends StatelessWidget {
         );
       }
 
-      Widget signInButton() {
+      Widget tacButton() {
         return GestureDetector(
           onTap: () {
-            Navigator.pushNamed(context, '/sign-in');
+            Navigator.pushNamed(context, '/sign-up');
           },
           child: Container(
             margin: EdgeInsets.only(top: 50, bottom: 73),
             child: Text(
-              'Have an account? Sign in',
+              'Don\' have an account? Sign Up',
               style: greyTextStyle.copyWith(
                 fontSize: 16,
                 fontWeight: light,
@@ -87,7 +84,7 @@ class SignUpPage extends StatelessWidget {
           listener: (context, state) {
             if (state is AuthSuccess) {
               Navigator.pushNamedAndRemoveUntil(
-                  context, '/bonus', (route) => false);
+                  context, '/main', (route) => false);
             } else if (state is AuthFailed) {
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
@@ -95,8 +92,7 @@ class SignUpPage extends StatelessWidget {
                   backgroundColor: kRedColor,
                 ),
               );
-              // ScaffoldMessenger.of(context).showSnackBar(
-              // );
+
               print(state.error);
             }
           },
@@ -107,13 +103,11 @@ class SignUpPage extends StatelessWidget {
               );
             }
             return CustomButton(
-              title: 'Get Started',
+              title: 'Sign In',
               onPressed: () {
-                context.read<AuthCubit>().signUp(
+                context.read<AuthCubit>().signIn(
                       email: emailController.text,
                       password: passwordController.text,
-                      name: nameController.text,
-                      hobby: hobbyController.text,
                     );
               },
               width: double.infinity,
@@ -135,11 +129,6 @@ class SignUpPage extends StatelessWidget {
         child: Column(
           children: [
             CustomTextFormField(
-              nameField: 'Full Name',
-              hintField: 'Your full name',
-              controller: nameController,
-            ),
-            CustomTextFormField(
               nameField: 'Email Address',
               hintField: 'Your email address',
               controller: emailController,
@@ -150,13 +139,8 @@ class SignUpPage extends StatelessWidget {
               isPassword: true,
               controller: passwordController,
             ),
-            CustomTextFormField(
-              nameField: 'Your Hobby',
-              hintField: 'Your hobby',
-              controller: hobbyController,
-            ),
             submitButton(),
-            signInButton()
+            tacButton()
           ],
         ),
       );
